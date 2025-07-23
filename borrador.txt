@@ -1,0 +1,114 @@
+// repeticion condicional while
+
+let iteracion = 1;
+
+while (iteracion <= 5) {
+    console.log(iteracion);
+    iteracion++;
+}
+
+// arrays o listas
+let productos = ["laptop", "celular", "tablet"];
+console.log (productos)
+
+productos.push ("televisor");
+console.log(productos)
+
+
+// ejercicio nombre y edad clase 9
+
+let nombre = prompt ("Escribi tu nombre: ");
+let edad = prompt ("escribi tu edad: ");
+let frase = "Hola " + nombre + " tu edad es " + edad;
+let frase_error = "no podes seguir en esta web.";
+
+while (isNaN (edad)) {
+    edad = prompt ("escriba un numero: ");
+} 
+
+let edad_num = parseInt (edad);
+console.log (edad_num);
+
+if (edad_num >= 18) {
+    console.log (frase);
+} else {
+    console.log (frase_error);
+}
+
+let edad = parseInt (prompt ("escribi tu edad"));
+let miembroVIP = true;
+let productos = [
+    ["tarjetas" , 20, true],
+    ["mural" , 80, false],
+    ["poster" , 50, true]
+];
+
+if (edad >= 18 && miembroVIP) {
+    console.log ("Acceso concedido.");
+} else {
+    console.log ("Acceso denegado.");
+}
+
+-----------
+
+   
+    .carrito-icono {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00bcd4;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+#contador-carrito {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.carrito-lateral {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.4s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carrito-lateral.abierto {
+  right: 0;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cerrar {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: auto;
+}
+
