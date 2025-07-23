@@ -47,17 +47,18 @@ function renderCarrito() {
 
   lista.innerHTML = "";
   let total = 0;
+  let cant_items = 0;
 
   carrito.forEach(servicio => {
     const li = document.createElement("li");
     li.textContent = `${servicio.nombre} - $${servicio.precio}`;
     lista.appendChild(li);
     total += servicio.precio;
+    cant_items += 1;
   });
 
   totalSpan.textContent = total;
-  contador.textContent = `$${total}`;
-
+  contador.textContent = cant_items;
 }
 
 renderCarrito();
